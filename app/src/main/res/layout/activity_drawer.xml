@@ -10,23 +10,30 @@
     <!-- 内容部分 -->
     <LinearLayout
         android:id="@+id/fl"
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:title="UI高级控件"></android.support.v7.widget.Toolbar>
 
         <Button
             android:id="@+id/showToast"
-            android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="显示Toast"/>
+            android:layout_margin="10dp"
+            android:text="显示Toast" />
 
         <Button
             android:id="@+id/showSnackBar"
-            android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="SnackBar"/>
+            android:layout_margin="10dp"
+            android:text="SnackBar" />
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/textInputLayout"
@@ -37,20 +44,41 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="请输入关键字"
-                android:layout_margin="10dp" />
+                android:layout_margin="10dp"
+                android:hint="请输入关键字" />
 
         </android.support.design.widget.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_meinv"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/meinv"/>
+
+            <TextView
+                android:id="@+id/tv_info"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:background="#5fff"
+                android:text="美女靓照"
+                android:textColor="@color/colorPrimary"/>
+
+        </RelativeLayout>
 
     </LinearLayout>
 
     <!-- 菜单部分 -->
     <android.support.design.widget.NavigationView
-        android:layout_gravity="start"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:menu="@menu/navigation_menu"
-        app:headerLayout="@layout/navigation_header">
-    </android.support.design.widget.NavigationView>
+        android:layout_gravity="start"
+        app:headerLayout="@layout/navigation_header"
+        app:menu="@menu/navigation_menu"></android.support.design.widget.NavigationView>
 
 </android.support.v4.widget.DrawerLayout>
